@@ -94,6 +94,10 @@ typedef struct
         int32 count;
         uint16 environmentScoreEmotionTags[count];
         break;
+    case 0x2143974C: // "EnvironmentScoreEmotionTags_32"
+        int32 count;
+        uint32 environmentScoreEmotionTags[count];
+        break;
     case 0xDCD08394: // "EnvironmentScores"
         uint32 count;
         float environmentScores[count];
@@ -138,6 +142,7 @@ string ReadProperty(Property& p)
     case 0x52F7F4BC: return "Unknown3";
     case 0xAEE67A1C: return "IsBaby";
     case 0xF3936A90: return "Unknown4";
+    case 0x2143974C: return "EnvironmentScoreEmotionTags_32";
     }
     return "Unknown"; 
 }
